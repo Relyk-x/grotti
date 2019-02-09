@@ -6,18 +6,15 @@ import os
 
 bot = commands.Bot(command_prefix='v!')
 servername = "ИEVER WΛVE"
+
 @bot.event
 async def on_ready():
-	servers = list(bot.servers)
-#status = f"over {str(len(bot.servers))} servers"
-	status = f"for {pref}commands"
 	print ("------------------------------------")
 	print (f"Bot Name: {bot.user.name}")
 	print (f"Bot ID: {bot.user.id}")
 	print (f"Discord Version: {discord.__version__}")
 	print ("Ready to invite new members...")
 	print ("------------------------------------")
-	await bot.change_presence(game=discord.Game(name=status,type=3))
 
 @bot.command(pass_context=True)
 async def invite(ctx, user: user.id):
