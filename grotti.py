@@ -17,12 +17,12 @@ async def on_ready():
 	print ("------------------------------------")
 
 @bot.command(pass_context=True)
-async def invite(ctx, user: discord.user.id):
+async def invite(ctx, user: discord.Member):
     invite = await bot.say(f"**Invite**\n{user.name} you have been invited to join {servername}\n\n**Link**\n<:discord:535748146761039872> Discord Server: https://discord.gg/SX93MmJ\n")
-    await bot.send_message(ctx.message.user.id, f"{invite}")
+    await bot.send_message(ctx.message.discord.Member, f"{invite}")
 
     discord.Embed(title="Invite", description = f"{user.name} you have been invited to join {servername}", color=0x7289da,)
     embed.add_field(name="Link", value="<:discord:535748146761039872> Discord Server: https://discord.gg/SX93MmJ")
-    await bot.send_message(ctx.message.user.id, embed=embed)
+    await bot.send_message(ctx.message.discord.Member, embed=embed)
 
 bot.run(os.getenv("BOT_TOKEN"))
