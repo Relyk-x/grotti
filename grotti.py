@@ -20,6 +20,13 @@ async def on_ready():
     #partner = f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join {servername}\n\n<:discord:535748146761039872> Discord Server: https://discord.gg/8GNRBsr"
     #await bot.send_message(user, f"{partner}")
 
+server = client.get_server(id="416940353564704768")
+
+async def members(ctx):
+    x = ctx.server.members
+    for member in x:
+        await bot.say(ctx.member.id)
+
 @bot.command(pass_context = True)
 async def invite(ctx, userToInvite):
     inviteLinq = await bot.create_invite(destination = ctx.message.channel, xkcd = True, max_uses = 1)
