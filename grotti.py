@@ -17,7 +17,7 @@ async def on_ready():
 	print ("------------------------------------")
 
 @bot.command(pass_context=True)
-async def invite(ctx, user: user.id):
+async def invite(ctx, user: discord.user.id):
     invite = await bot.say(f"**Invite**\n{user.name} you have been invited to join {servername}\n\n**Link**\n<:discord:535748146761039872> Discord Server: https://discord.gg/SX93MmJ\n")
     await bot.send_message(ctx.message.user.id, f"{invite}")
 
