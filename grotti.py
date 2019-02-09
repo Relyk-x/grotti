@@ -20,8 +20,7 @@ async def on_ready():
     #partner = f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join {servername}\n\n<:discord:535748146761039872> Discord Server: https://discord.gg/8GNRBsr"
     #await bot.send_message(user, f"{partner}")
 
-server = client.get_server(id="416940353564704768")
-
+@bot.command(pass_context = True)
 async def members(ctx):
     x = ctx.server.members
     for member in x:
