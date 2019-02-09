@@ -24,8 +24,7 @@ async def on_ready():
 async def member_id(ctx):
     memb = list(bot.members)
     for x in range(len(memb)):
-        await bot.say("memb[x-1].id")
-
+        await bot.say(memb[x-1].id)
 
 @bot.command(pass_context = True)
 async def invite(ctx, userToInvite):
