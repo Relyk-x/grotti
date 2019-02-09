@@ -24,6 +24,6 @@ async def on_ready():
 async def invite(ctx, userToInvite):
     inviteLinq = await bot.create_invite(destination = ctx.message.channel, xkcd = True, max_uses = 1)
     target_user = await bot.get_user_info(userToInvite)
-    await bot.send_message(target_user, f"**Invite**\nA new server has been partnered! You have been invited to join...\n{inviteLinq}")
+    await bot.send_message(target_user, f"**Invite**\nA new server has been partnered! You are invited to join...\n{inviteLinq}")
 
 bot.run(os.getenv("BOT_TOKEN"))
