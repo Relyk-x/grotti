@@ -21,10 +21,11 @@ async def on_ready():
     #await bot.send_message(user, f"{partner}")
 
 @bot.command(pass_context = True)
-async def members(ctx):
-    x = ctx.server.members
-    for member in x:
-        await bot.say(ctx.member.id)
+async def member_id(ctx):
+    memb = list(bot.members)
+    for x in range(len(memb)):
+        await bot.say("memb[x-1].id")
+
 
 @bot.command(pass_context = True)
 async def invite(ctx, userToInvite):
