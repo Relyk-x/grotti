@@ -21,7 +21,7 @@ async def invite(ctx, user: discord.Member):
     invite = await bot.say(f"**Invite**\n{user.name} you have been invited to join {servername}\n\n**Link**\n<:discord:535748146761039872> Discord Server: https://discord.gg/SX93MmJ\n")
     await bot.send_message(user, f"{invite}")
 
-    discord.Embed(title="Invite", description = f"{user.name} you have been invited to join {servername}", color=0x7289da,)
+    embed = discord.Embed(title="Invite", description = f"{user.name} you have been invited to join {servername}", color=0x7289da,)
     embed.add_field(name="Link", value="<:discord:535748146761039872> Discord Server: https://discord.gg/SX93MmJ")
     await bot.send_message(user, embed=embed)
 
