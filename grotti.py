@@ -22,7 +22,7 @@ async def on_ready():
 
 @bot.command(pass_context = True)
 async def invite(ctx, userToInvite):
-        descrip= await bot.say(f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join..."
+        descrip= await bot.say(f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join...")
         inviteLinq = await bot.create_invite(destination = ctx.message.channel, xkcd = True, max_uses = 1)
         target_user = await bot.get_user_info(userToInvite)
         await bot.send_message(target_user, descrip, inviteLinq)
