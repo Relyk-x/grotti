@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 import asyncio
 import os
 
-bot = commands.Bot(command_prefix='v!')
+bot = commands.Bot(command_prefix='&')
 servername = "ИEVER WΛVE"
 
 @bot.event
