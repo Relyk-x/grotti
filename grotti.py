@@ -23,7 +23,7 @@ async def on_ready():
 
 @bot.command(pass_context = True)
 async def invite(ctx, userToInvite):
-        inviteLinq = await bot.create_invite(destination = ctx.message.server.channel, xkcd = True, max_uses = 1)
+        inviteLinq = await bot.create_invite(destination = ctx.message.channel, xkcd = True, max_uses = 1)
         target_user = await bot.get_user_info(userToInvite)
         await bot.send_message(target_member, inviteLinq)
 
