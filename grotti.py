@@ -7,8 +7,6 @@ import os
 bot = commands.Bot(command_prefix='&')
 servername = "Lewd Lounge +18"
 
-
-
 @bot.event
 async def on_ready():
     servers = list(bot.servers)
