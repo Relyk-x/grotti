@@ -5,7 +5,7 @@ import asyncio
 import os
 
 bot = commands.Bot(command_prefix='&')
-servername = "Lewd Lounge +18"
+servername = "WΛVE"
 
 @bot.event
 async def on_ready():
@@ -21,7 +21,7 @@ async def on_ready():
 
 @bot.command(pass_context=True)
 async def invite(ctx, user: discord.Member):
-    partner = f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join {servername}\n\n<:discord:535748146761039872> Discord Server: https://discord.gg/8GNRBsr"
+    partner = f"**Invite**\n{user.name} a new server has been partnered! You have been invited to join {servername}\n\n<:discord:535748146761039872> Discord Server: https://discord.gg/WFcFThP"
     await bot.send_message(user, f"{partner}")
 
 #@bot.command(pass_context = True)
